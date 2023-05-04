@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.mahesh.pojo.customer" table = "customer">
+      <id name = "customerid" type="int">
+      <column name="customerid" length="15"/>
+         <generator class="assigned"></generator>
+      </id>
+      <property name="customername" type="java.lang.String">
+      <column name="cname" length="30"/>
+       </property>
+      <property name="customeraddress" type="java.lang.String">
+      <column name="caddress" length="30"/>
+      
+      
+      </property>    
+   </class>
+</hibernate-mapping>

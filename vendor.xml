@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.mahesh.pojo.vendor" table = "vendor">
+      <id name = "vid" type="int">
+      <column name="vid" length="15"/>
+         <generator class="assigned"></generator>
+      </id>
+      <property name="vname" type="java.lang.String">
+      <column name="vname" length="30"/>
+      
+      </property>
+      <set name="customer" cascade="all" lazy="true">
+      <key column="vid"/>
+      <one-to-many class="com.mahesh.pojo.customer"/>
+      </set>
+      
+     
+      
+      
+   </class>
+</hibernate-mapping>
